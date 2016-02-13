@@ -1,0 +1,11 @@
+
+<div class="container">
+	<h1> Rotations </h1>
+	<div>
+		<div class="list-group">
+			<% @rotations.each do |rotation| %>
+			<%= link_to(rotation.name, rotation_path(rotation), :class => "list-group-item")%>
+			<%end%>
+		<ul>
+	</div>
+</div>

@@ -1,0 +1,8 @@
+<ul>
+	<% @users.each do |user| %>
+		<li> <h4><%= user.name %></h4> <b><%= user.email %></b> | <%= "#{user.created_at}".to_time(:local) %> | Admin: <%= user.admin %> | <%= link_to 'Delete Account', user,
+							method: :delete,
+							data: {confirm: 'Are you sure?'} %></li>
+
+	<% end %>
+</ul>

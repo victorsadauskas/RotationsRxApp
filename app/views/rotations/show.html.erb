@@ -1,0 +1,41 @@
+
+	<div class = "container">
+			<div>
+				<%= link_to("< Back to List", rotations_path, :class => 'btn btn-large btn-primary', :id => "back")%> 	
+			</div>
+			<div>
+				<h1><%= @rotation.name %></h1>
+			</div>
+	</div>
+	<div class = "container">
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"> Duration:</h3>
+		  </div>
+		  <div class="panel-body">
+		    <%=@rotation.duration %>
+		  </div>
+		</div>
+
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"> Estimated hours of work per week:</h3>
+		  </div>
+		  <div class="panel-body">
+		    <%=@rotation.hours %>
+		  </div>
+		</div>
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+		    <h3 class="panel-title"> Location:</h3>
+		  </div>
+		  <div class="panel-body">
+		    <%=@rotation.location%>
+		  </div>
+		</div>
+	</div>
+
+
+	<div class = "container">
+		<%= link_to("View Student Comments >", rotation_comments_path(@rotation), :class => 'btn btn-primary btn-large', :id => 'comments') %>
+	</div>

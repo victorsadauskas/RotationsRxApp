@@ -1,0 +1,29 @@
+<%= form_for(@user) do |f| %>
+	<%= render "shared/errors", object: @user %>
+	<fieldset>
+		<div class = "container">
+			<div class ="col-md-4" id="sign_in">
+				<div class = "required">
+					<%= f.text_field :name, size: 40, autofocus: true, placeholder: 'Name' %>
+				</div>
+
+				<div class = "required">
+					<%= f.email_field :email, size: 40, placeholder: 'UIC student email' %>
+				</div>
+
+				<div class = "required">
+					<%= f.password_field :password, size: 40, placeholder: 'Password' %>
+				</div>
+
+				<div class = "required">
+					<%= f.password_field :password_confirmation, size: 40, placeholder: 'Confirm Password' %>
+				</div>
+
+		
+				<p>
+					<%= f.submit "Create Account", :class => 'btn btn-primary btn-large' %>
+				</p>
+			</div>
+		</div>
+	</fieldset>
+<% end %>

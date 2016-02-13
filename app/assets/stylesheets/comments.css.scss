@@ -1,0 +1,38 @@
+// Place all the styles related to the Comments controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+#vertical {
+	margin-top: 5%;
+}
+
+#big_btn {
+	width: 25%;
+	background-color: #188d07;
+	border-color: #188d07;
+}
+
+#big_btn:hover {
+	background-color: #fff;
+	color: #188d07;
+	border-color: #fff
+}
+
+#comment_panel {
+	width: 90%;
+	margin-top: 10px;
+	border: none;
+	padding-bottom: 5px;
+}
+
+.more{
+	font-size: 20px;
+	font-weight: bold;
+}
+
+#comments_title h1{
+	font-weight: bold;
+	font-size: 50px;
+}
