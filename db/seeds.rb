@@ -5,3 +5,13 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+
+rotations = Rotation.create([{name: 'Family Medicine'},
+							 {name: 'Internal Medicine (Not UHATS)'},
+							 {name: 'Obstetrics & Gynecology'},
+							 {name: 'Pediatrics'}, 
+							 {name: 'Psychiatry'}, 
+							 {name: 'Surgery'}, 
+							 {name: 'UHATS'}])
