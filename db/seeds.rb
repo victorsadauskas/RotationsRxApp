@@ -15,4 +15,5 @@ rotations = Rotation.create([{name: 'Family Medicine'},
 							 {name: 'Obstetrics & Gynecology'},
 							 {name: 'Pediatrics'}, 
 							 {name: 'Psychiatry'}, 
-							 {name: 'Surgery'}])
+							 {name: 'Surgery'},
+							 {name: 'UHATS'}])

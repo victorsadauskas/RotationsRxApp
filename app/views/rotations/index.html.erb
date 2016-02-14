@@ -8,4 +8,7 @@
 			<%end%>
 		<ul>
 	</div>
+	<% if current_user_admin? %>
+		<%= link_to('Add Rotation', new_rotation_path) %>
+	<% end %>
 </div>
