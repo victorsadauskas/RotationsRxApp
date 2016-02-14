@@ -7,7 +7,7 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 
-users = User.create([{name: 'admin', email: 'rrxadmin@uic.edu', password: 'admin1', password_confirmation: 'admin1'}])
+users = User.create([{name: 'admin', email: 'rrxadmin@uic.edu', password: 'admin1', password_confirmation: 'admin1', admin: true}])
 
 
 rotations = Rotation.create([{name: 'Family Medicine'},
