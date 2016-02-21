@@ -13,27 +13,8 @@
 
       <%= render "shared/errors", object: @comment %>
 
-<div class = "container">
-    <%= form_for([@rotation, @comment]) do |f| %>
+      <%= render "shared/commentform", object1: @rotation, object2: @comment %>
 
-      <div class = "require">
-        <p>
-          <%= f.label "Comment Title (*required):" %><br/>
-          <%= f.text_field :name, size: 40, autofocus: true, placeholder: "Short description/title for your comment" %>
-        </p>
-      </div>
-      <p>
-        <%= f.label "Comment (*required):" %><br/>
-        <%= f.text_area :body, cols: "120", rows: "10", autofocus: true, placeholder: "Write comment here. Feel free to write whatever you would like. Common useful comments include: Where/when to show up on day one, how to study for the shelf, differences in teaching styles, which parts of the rotation are useful to get studying done, any unique aspects of the rotation, anything else you wish YOU had known when starting!" %>
-      </p>
-      <p>
-        <%= f.label "#{@rotation.name} Rating: (optional)" %><br/>
-        <%= f.select :rating, 1..10, autofocus: true, prompt: "Pick one" %>
-      </p>
-      
-           <%= f.submit '+ Post Comment', :class => 'btn btn-primary btn-large', :id => 'big_btn' %>
-
-    <% end %>	
   </div>
 </div>
 

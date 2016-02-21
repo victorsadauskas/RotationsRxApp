@@ -1,10 +1,9 @@
-
 	<div class = "container">
 			<div>
-				<%= link_to("< Back to List", rotations_path, :class => 'btn btn-large btn-primary', :id => "back")%> 	
+				<%= link_to("< Back to List", m4rotations_path, :class => 'btn btn-large btn-primary', :id => "back")%> 	
 			</div>
 			<div>
-				<h1><%= @rotation.name %></h1>
+				<h1><%= @m4rotation.name %></h1>
 			</div>
 	</div>
 	<div class = "container">
@@ -13,7 +12,7 @@
 		    <h3 class="panel-title"> Duration:</h3>
 		  </div>
 		  <div class="panel-body">
-		    <%=@rotation.duration %>
+		    <%=@m4rotation.duration %>
 		  </div>
 		</div>
 
@@ -22,7 +21,7 @@
 		    <h3 class="panel-title"> Estimated hours of work per week:</h3>
 		  </div>
 		  <div class="panel-body">
-		    <%=@rotation.hours %>
+		    <%=@m4rotation.hours %>
 		  </div>
 		</div>
 		<div class="panel panel-default">
@@ -30,17 +29,17 @@
 		    <h3 class="panel-title"> Location:</h3>
 		  </div>
 		  <div class="panel-body">
-		    <%=@rotation.location%>
+		    <%=@m4rotation.location%>
 		  </div>
 		</div>
 	</div>
 
 
 	<div class = "container">
-		<%= link_to("View Student Comments >", rotation_comments_path(@rotation), :class => 'btn btn-primary btn-large', :id => 'comments') %> <br>
+		<%= link_to("View Student Comments >", m4rotation_m4comments_path(@m4rotation), :class => 'btn btn-primary btn-large', :id => 'comments') %> <br>
 		
 		<% if current_user_admin? %>	
-			<%= link_to("Edit", edit_rotation_path(@rotation)) %> <br>
-			<%= link_to("Delete", rotation_path(@rotation), method: :delete, data: {confirm: 'Are you sure?' }) %>
+			<%= link_to("Edit", edit_m4rotation_path(@m4rotation)) %> <br>
+			<%= link_to("Delete", m4rotation_path(@m4rotation), method: :delete, data: {confirm: 'Are you sure?' }) %>
 		<% end %>
 	</div>

@@ -1,0 +1,17 @@
+<div class = 'container'>
+  <div class = "col-md-4">
+     <%= link_to("< Back to #{@m4rotation.name} Comments", m4rotation_m4comments_path(@m4rotation), :class => 'btn btn-primary btn-large', :id => 'vertical')%> 
+      </p>
+  </div>
+  <div class = "col-md-4">
+    <h1> Add Comment for <%= link_to(@m4rotation.name, @m4rotation)%> </h1>
+  </div>
+  <div class = "col-md-4">
+
+  </div>
+</div>
+
+      <%= render "shared/errors", object: @m4comment %>
+
+      <%= render "shared/commentform", object1: @m4rotation, object2: @m4comment %>
+</div>

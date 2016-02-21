@@ -1,0 +1,14 @@
+
+<div class="container">
+	<h1> M4 Rotations </h1>
+	<div>
+		<div class="list-group">
+			<% @m4rotations.each do |m4rotation| %>
+			<%= link_to(m4rotation.name, m4rotation_path(m4rotation), :class => "list-group-item")%>
+			<%end%>
+		<ul>
+	</div>
+	<% if current_user_admin? %>
+		<%= link_to('Add Rotation', new_m4rotation_path) %>
+	<% end %>
+</div>

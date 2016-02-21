@@ -9,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         </button>
-      <a class="navbar-brand" href="/rotations">RotationsRx</a>
+      <a class="navbar-brand" href="/">RotationsRx</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
@@ -19,7 +19,8 @@
         <% if current_user_admin? %>
       	   <li><%= link_to "Users", users_path %></li>
         <% end %> 
-        <li><%= link_to "Home", rotations_path %></li>  
+        <li><%= link_to "M3 Rotations", rotations_path %></li>  
+        <li><%= link_to "M4 Rotations", m4rotations_path %></li>
 
       <% if current_user %>
 

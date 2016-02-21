@@ -1,20 +1,19 @@
-
 <div class = "container" id = "comments_title">
 	<div class = "col-md-4" id = "vertical">
-		<%=link_to("< Back to Rotation", rotation_path(@rotation), :class => 'btn btn-primary btn-large')%>
+		<%=link_to("< Back to Rotation", m4rotation_path(@m4rotation), :class => 'btn btn-primary btn-large')%>
 	</div>
 
 	<div class = "col-md-4">
-		<h1><%=@rotation.name %> Comments</h1>
+		<h1><%=@m4rotation.name %> Comments</h1>
 	</div>
 	<div class = "col-md-4" id = "vertical">
-		<%=link_to("+ Add New Comment", new_rotation_comment_path, :class => 'btn btn-primary btn-large')%> 
+		<%=link_to("+ Add New Comment", new_m4rotation_m4comment_path, :class => 'btn btn-primary btn-large')%> 
 	</div>
 </div>
 	
 <div class = "panel panel-default" id="comment_panel">
 	
-	<% @comments.each do |comment| %>
+	<% @m4comments.each do |comment| %>
 		
 
 			<div class = "panel-heading">
@@ -25,14 +24,10 @@
 	
 	
 	 <%=truncate(comment.body, length: 1000, separator: ' ')%> 
-	 
 
-		<% if comment.body.size > 1000 %> 
-			 <div class = "more">
-			 <%=link_to('Read More...', rotation_comment_path(@rotation, comment)) %>
-			</div>
-		<% end %>
-
+	 <% if comment.body.size > 1000 %>
+	 	<div class = "more"><%=link_to('Read More...', m4rotation_m4comment_path(@m4rotation, comment)) %></div>
+	 <% end %>
 
 		<% if current_user_admin? %>
 			<%=link_to "Delete", m4rotation_m4comment_path(@m4rotation, comment), method: :delete, data: {confirm: 'Are you sure?'}%>
@@ -46,11 +41,5 @@
 
 
 <div class = "container">
-	<%=link_to("+ Add New Comment", new_rotation_comment_path, :class => 'btn btn-primary btn-large', :id => 'big_btn')%>
+	<%=link_to("+ Add New Comment", new_m4rotation_m4comment_path, :class => 'btn btn-primary btn-large', :id => 'big_btn')%>
 </div>
-
-
-
-
-
-

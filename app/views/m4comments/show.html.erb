@@ -1,0 +1,11 @@
+<div class = "container" id="comment_title">
+	<h1><%=@m4comment.name%>:</h1> <br>
+
+<%=@m4comment.body%>
+<br><br><br>
+</div>
+
+<div class = "container">
+<%=link_to("Back to #{@m4rotation.name} Comments", m4rotation_m4comments_path(@m4rotation), :class => 'btn btn-primary btn-larg')%>
+
+</div>

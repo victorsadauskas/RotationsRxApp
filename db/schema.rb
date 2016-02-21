@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160214170239) do
+ActiveRecord::Schema.define(version: 20160219015834) do
 
   create_table "comments", force: true do |t|
     t.string   "name"
@@ -23,6 +23,26 @@ ActiveRecord::Schema.define(version: 20160214170239) do
   end
 
   add_index "comments", ["rotation_id"], name: "index_comments_on_rotation_id"
+
+  create_table "m4comments", force: true do |t|
+    t.string   "name"
+    t.string   "body"
+    t.integer  "rating"
+    t.integer  "m4rotation_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "m4comments", ["m4rotation_id"], name: "index_m4comments_on_m4rotation_id"
+
+  create_table "m4rotations", force: true do |t|
+    t.string   "name"
+    t.string   "duration"
+    t.string   "location"
+    t.string   "hours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "rotations", force: true do |t|
     t.string   "name"
