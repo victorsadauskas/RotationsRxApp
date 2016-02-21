@@ -35,7 +35,7 @@
 
 
 		<% if current_user_admin? %>
-			<%=link_to "Delete", m4rotation_m4comment_path(@m4rotation, comment), method: :delete, data: {confirm: 'Are you sure?'}%>
+			<%=link_to "Delete", rotation_comment_path(@rotation, comment), method: :delete, data: {confirm: 'Are you sure?'}%>
 		<% end %> <br><br><br><br><br>
 		
 	<% end %> </ul> 
