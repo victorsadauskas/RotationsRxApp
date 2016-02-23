@@ -49,3 +49,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 # Dump info from db into seed file
 gem 'seed_dump'
+
+# Markup input
+gem 'redcarpet'
+gem 'coderay'

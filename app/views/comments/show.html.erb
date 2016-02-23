@@ -1,7 +1,7 @@
 <div class = "container" id="comment_title">
-	<h1><%=@comment.name%>:</h1> <br>
+	<h1><%= @comment.name%>:</h1> <br>
 
-<%=@comment.body%>
+<%= markdown(@comment.body) %>
 <br><br><br>
 </div>
 

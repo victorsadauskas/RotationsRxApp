@@ -24,7 +24,7 @@
 			</div>
 	
 	
-	 <%=truncate(comment.body, length: 1000, separator: ' ')%> 
+	 <%= truncate(markdown(comment.body), length: 1000, separator: ' ')%> 
 	 
 
 		<% if comment.body.size > 1000 %> 
