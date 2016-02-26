@@ -1,7 +1,7 @@
 <div class = "container" id="comment_title">
 	<h1><%=@m4comment.name%>:</h1> <br>
 
-<%=@m4comment.body%>
+<%=markdown(@m4comment.body)%>
 <br><br><br>
 </div>
 
