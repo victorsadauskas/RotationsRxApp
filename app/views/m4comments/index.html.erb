@@ -21,16 +21,17 @@
 				<h2><%= comment.name %></h2>   	<p>Posted: <%= format_date(comment.created_at)%></p>
 				<p> <%=format_rating(comment.rating)%> </p>
 			</div>
-	
-	 <%=truncate(markdown(comment.body), length: 1000, separator: ' ')%> 
+			
+			<%=markdown(truncate((comment.body), length: 1000, separator: ' '))%>
 
-	 <% if comment.body.size > 1000 %>
-	 	<div class = "more"><%=link_to('Read More...', m4rotation_m4comment_path(@m4rotation, comment)) %></div>
-	 <% end %>
 
-		<% if current_user_admin? %>
-			<%=link_to "Delete", m4rotation_m4comment_path(@m4rotation, comment), method: :delete, data: {confirm: 'Are you sure?'}%>
-		<% end %> <br><br><br><br><br>
+		 <% if comment.body.size > 1000 %>
+		 	<div class = "more"><%=link_to('Read More...', m4rotation_m4comment_path(@m4rotation, comment)) %></div>
+		 <% end %>
+
+			<% if current_user_admin? %>
+				<%=link_to "Delete", m4rotation_m4comment_path(@m4rotation, comment), method: :delete, data: {confirm: 'Are you sure?'}%>
+			<% end %> <br><br><br><br><br>
 		
 	<% end %> </ul> 
 </div>
