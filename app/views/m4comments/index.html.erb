@@ -13,7 +13,7 @@
 	
 <div class = "panel panel-default" id="comment_panel">
 	
-	<% @m4comments.each do |comment| %>
+	<% @m4comments.order("created_at desc").each do |comment| %>
 		
 
 			<div class = "panel-heading">
