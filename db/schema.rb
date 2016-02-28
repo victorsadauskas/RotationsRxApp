@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160219015834) do
+ActiveRecord::Schema.define(version: 20160228200254) do
 
   create_table "comments", force: true do |t|
     t.string   "name"
@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20160219015834) do
 
   create_table "m4comments", force: true do |t|
     t.string   "name"
-    t.string   "body"
+    t.text     "body",          limit: 255
     t.integer  "rating"
     t.integer  "m4rotation_id"
     t.datetime "created_at"
