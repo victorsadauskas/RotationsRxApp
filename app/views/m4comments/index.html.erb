@@ -22,7 +22,7 @@
 				<p> <%=format_rating(comment.rating)%> </p>
 			</div>
 			
-			<%=markdown(truncate((comment.body), length: 1000, separator: ' '))%>
+			<%= markdown(truncate((comment.body), length: 1000, separator: ' '))%>
 
 
 		 <% if comment.body.size > 1000 %>
