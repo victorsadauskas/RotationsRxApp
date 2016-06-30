@@ -21,5 +21,7 @@ test:
   database: db/test.sqlite3
 
 production:
-  <<: *default
-  database: db/production.sqlite3
+  adapter: heroku pg:psql --app rotationsrxapp DATABASE
+  database: d3j7ppssagsvrk
+  username: uekpbpgnzvvhin
+  host: ec2-54-227-245-197.compute-1.amazonaws.com
